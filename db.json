@@ -1,0 +1,452 @@
+{
+  "players" : [
+      {
+          "id": 1,
+          "name": "Egg",
+          "email": "eggie@egg.com"
+      },
+      {
+          "id": 2,
+          "name": "Macaroni",
+          "email": "macncheesie@cheeseworld.com"
+      },
+      {
+          "id": 3,
+          "name": "Beef",
+          "email": "ugotbeef@askinqueues.com"
+      },
+      {
+          "id": 4,
+          "name": "Apple",
+          "email": "oranges@applenoranges.com"
+      }
+  ],
+
+  "villagers" : [
+      {
+          "id": 1,
+          "name": "Ankha",
+          "gender": "Female",
+          "birthday": "September 22",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/5/56/Ankha_NH.png/revision/latest/scale-to-width-down/217?cb=20200817172044"
+      },
+      {
+          "id": 2,
+          "name": "Bob",
+          "gender": "Male",
+          "birthday": "January 1",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/e/ea/Bob_NH.png/revision/latest/scale-to-width-down/217?cb=20200817185816"
+      },
+      {
+          "id": 3,
+          "name": "Merengue",
+          "gender": "Female",
+          "birthday": "March 19",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/0/0c/Merengue_NH.png/revision/latest?cb=20200321211014"
+      },
+      {
+          "id": 4,
+          "name": "Sherb",
+          "gender": "Male",
+          "birthday": "January 18",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/1/18/Sherb_NH.png/revision/latest/scale-to-width-down/303?cb=20201127040346"
+      },
+      {
+          "id": 5,
+          "name": "Diana",
+          "gender": "Female",
+          "birthday": "January 4",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/1/1f/Diana_NH.png/revision/latest/scale-to-width-down/310?cb=20200802193316"
+      },
+      {
+          "id": 6,
+          "name": "Marshal",
+          "gender": "Male",
+          "birthday": "September 29",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/d/da/Marshal_NH.png/revision/latest/scale-to-width-down/350?cb=20200317171946"
+      },
+      {
+          "id": 7,
+          "name": "Audie",
+          "gender": "Female",
+          "birthday": "August 31",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/1/1b/Audie_NH.png/revision/latest?cb=20200829012735"
+      },
+      {
+          "id": 8,
+          "name": "Lucky",
+          "gender": "Male",
+          "birthday": "November 4",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/5/59/Lucky_NH.png/revision/latest/scale-to-width-down/275?cb=20200802135150"
+      },
+      {
+          "id": 9,
+          "name": "Tia",
+          "gender": "Female",
+          "birthday": "November 18",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/0/0d/Tia_NH.png/revision/latest/scale-to-width-down/313?cb=20200802144001"
+      },
+      {
+          "id": 10,
+          "name": "Zucker",
+          "gender": "Male",
+          "birthday": "March 8",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/7/7f/Zucker_NH.png/revision/latest/scale-to-width-down/274?cb=20200802161141"
+      },
+      {
+          "id": 11,
+          "name": "Cherry",
+          "gender": "Female",
+          "birthday": "May 11",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/3/3e/Cherry_NH.png/revision/latest/scale-to-width-down/300?cb=20200524035737"
+      },
+      {
+          "id": 12,
+          "name": "Stitches",
+          "gender": "Male",
+          "birthday": "February 10",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/5/56/Stitches_NH.png/revision/latest/scale-to-width-down/140?cb=20200413171903"
+      },
+      {
+          "id": 13,
+          "name": "Judy",
+          "gender": "Female",
+          "birthday": "March 10",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/d/d4/Judy_NH.png/revision/latest/scale-to-width-down/270?cb=20200318005830"
+      },
+      {
+          "id": 14,
+          "name": "Dobie",
+          "gender": "Male",
+          "birthday": "February 17",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/7/76/Dobie_NH.png/revision/latest/scale-to-width-down/250?cb=20200819103512"
+      },
+      {
+          "id": 15,
+          "name": "Fauna",
+          "gender": "Female",
+          "birthday": "March 26",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/9/91/Fauna_NH.png/revision/latest/scale-to-width-down/204?cb=20200624222648"
+      },
+      {
+          "id": 16,
+          "name": "Raymond",
+          "gender": "Male",
+          "birthday": "October 1",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/a/a4/Raymond_NH_1.png/revision/latest/scale-to-width-down/184?cb=20200908002252"
+      },
+      {
+          "id": 17,
+          "name": "Coco",
+          "gender": "Female",
+          "birthday": "March 1",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/8/83/Coco_NH.png/revision/latest/scale-to-width-down/258?cb=20200321103716"
+      },
+      {
+          "id": 18,
+          "name": "Dom",
+          "gender": "Male",
+          "birthday": "March 18",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/7/75/Dom_NH.png/revision/latest/scale-to-width-down/323?cb=20200930023125"
+      },
+      {
+          "id": 19,
+          "name": "Ketchup",
+          "gender": "Female",
+          "birthday": "July 27",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/4/42/Ketchup_NH.png/revision/latest/scale-to-width-down/317?cb=20200802142754"
+      },
+      {
+          "id": 20,
+          "name": "Ribbot",
+          "gender": "Male",
+          "birthday": "February 13",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/9/94/Ribbot_NH.png/revision/latest/scale-to-width-down/288?cb=20200802145154"
+      },
+      {
+          "id": 21,
+          "name": "Rosie",
+          "gender": "Female",
+          "birthday": "February 27",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/6/67/Rosie_NH.png/revision/latest/scale-to-width-down/130?cb=20200324160932"
+      },
+      {
+          "id": 22,
+          "name": "Julian",
+          "gender": "Male",
+          "birthday": "March 15",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/f/f2/Julian_NH.png/revision/latest/scale-to-width-down/227?cb=20200802154101"
+      },
+      {
+          "id": 23,
+          "name": "Sprinkle",
+          "gender": "Female",
+          "birthday": "February 20",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/4/44/Sprinkle_NH.png/revision/latest/scale-to-width-down/345?cb=20200802163456"
+      },
+      {
+          "id": 24,
+          "name": "Drago",
+          "gender": "Male",
+          "birthday": "February 12",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/f/f9/Drago_NH.png/revision/latest/scale-to-width-down/340?cb=20200802062031"
+      },
+      {
+          "id": 25,
+          "name": "Lopez",
+          "gender": "Male",
+          "birthday": "August 20",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/5/53/Lopez_NH.png/revision/latest/scale-to-width-down/282?cb=20200803115324"
+      },
+      {
+          "id": 26,
+          "name": "Bluebear",
+          "gender": "Female",
+          "birthday": "June 24",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/4/49/Bluebear_NH.png/revision/latest/scale-to-width-down/286?cb=20200817185619"
+      },
+      {
+          "id": 27,
+          "name": "Skye",
+          "gender": "Female",
+          "birthday": "March 24",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/d/d1/Skye_NH.png/revision/latest/scale-to-width-down/248?cb=20200224182217"
+      },
+      {
+          "id": 28,
+          "name": "Daisy",
+          "gender": "Female",
+          "birthday": "November 16",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/9/96/Daisy_NH.png/revision/latest?cb=20200802135104"
+      },
+      {
+          "id": 29,
+          "name": "Snake",
+          "gender": "Male",
+          "birthday": "November 3",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/e/ec/Snake_NH.png/revision/latest?cb=20200321203921"
+      },
+      {
+          "id": 30,
+          "name": "Lionel",
+          "gender": "Male",
+          "birthday": "July 29",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/b/bb/Lionel_NH.png/revision/latest/scale-to-width-down/301?cb=20200718074253"
+      },
+      {
+          "id": 31,
+          "name": "Henry",
+          "gender": "Male",
+          "birthday": "September 21",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/2/26/Henry_NH.png/revision/latest/scale-to-width-down/288?cb=20200802145016"
+      },
+      {
+          "id": 32,
+          "name": "Freya",
+          "gender": "Female",
+          "birthday": "December 14",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/e/ee/Freya_NH.png/revision/latest/scale-to-width-down/250?cb=20200820061634"
+      },
+      {
+          "id": 33,
+          "name": "Elise",
+          "gender": "Female",
+          "birthday": "March 21",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/0/0c/Elise_NH.png/revision/latest/scale-to-width-down/261?cb=20200802160710"
+      },
+      {
+          "id": 34,
+          "name": "Cole",
+          "gender": "Male",
+          "birthday": "August 10",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/f/f6/Cole_NH.png/revision/latest/scale-to-width-down/247?cb=20200803114150"
+      },
+      {
+          "id": 35,
+          "name": "Curt",
+          "gender": "Male",
+          "birthday": "July 1",
+          "image_url": "https://static.wikia.nocookie.net/animalcrossing/images/2/27/Curt_NH.png/revision/latest/scale-to-width-down/200?cb=20200820052841" 
+      }
+  ],
+
+  "personality": [
+      {
+          "id": 1,
+          "name": "Normal"
+      },
+      {
+          "id": 2,
+          "name": "Lazy"
+      },
+      {
+          "id": 3,
+          "name": "Uchi"
+      },
+      {
+          "id": 4,
+          "name": "Snooty"
+      },
+      {
+          "id": 5,
+          "name": "Cranky"
+      },
+      {
+          "id": 6,
+          "name": "Jock"
+      },
+      {
+          "id": 7,
+          "name": "Peppy"
+      },
+      {
+          "id": 8,
+          "name": "Smug"
+      }
+  ],
+
+  "species": [
+      {
+          "id": 1,
+          "name": "Alligator"
+      },
+      {
+          "id": 2,
+          "name": "Anteater"
+      },
+      {
+          "id": 3,
+          "name": "Bear"
+      },
+      {
+          "id": 4,
+          "name": "Bird"
+      },
+      {
+          "id": 5,
+          "name": "Bull"
+      },
+      {
+          "id": 6,
+          "name": "Cat"
+      },
+      {
+          "id": 7,
+          "name": "Chicken"
+      },
+      {
+          "id": 8,
+          "name": "Cow"
+      },
+      {
+          "id": 9,
+          "name": "Cub"
+      },
+      {
+          "id": 10,
+          "name": "Deer"
+      },
+      {
+          "id": 11,
+          "name": "Dog"
+      },
+      {
+          "id": 12,
+          "name": "Duck"
+      },
+      {
+          "id": 13,
+          "name": "Eagle"
+      },
+      {
+          "id": 14,
+          "name": "Elephant"
+      },
+      {
+          "id": 15,
+          "name": "Frog"
+      },
+      {
+          "id": 16,
+          "name": "Goat"
+      },
+      {
+          "id": 17,
+          "name": "Gorilla"
+      },
+      {
+          "id": 18,
+          "name": "Hamster"
+      },
+      {
+          "id": 19,
+          "name": "Hippo"
+      },
+      {
+          "id": 20,
+          "name": "Horse"
+      },
+      {
+          "id": 21,
+          "name": "Kangaroo"
+      },
+      {
+          "id": 22,
+          "name": "Koala"
+      },
+      {
+          "id": 23,
+          "name": "Lion"
+      },
+      {
+          "id": 24,
+          "name": "Monkey"
+      },
+      {
+          "id": 25,
+          "name": "Mouse"
+      },
+      {
+          "id": 26,
+          "name": "Octopus"
+      },
+      {
+          "id": 27,
+          "name": "Ostrich"
+      },
+      {
+          "id": 28,
+          "name": "Penguin"
+      },
+      {
+          "id": 29,
+          "name": "Pig"
+      },
+      {
+          "id": 30,
+          "name": "Rabbit"
+      },
+      {
+          "id": 31,
+          "name": "Rhino"
+      },
+      {
+          "id": 32,
+          "name": "Sheep"
+      },
+      {
+          "id": 33,
+          "name": "Squirrel"
+      },
+      {
+          "id": 34,
+          "name": "Tiger"
+      },
+      {
+          "id": 35,
+          "name": "Wolf"
+      }
+  ]
+
+
+}
