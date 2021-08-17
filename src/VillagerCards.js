@@ -1,15 +1,18 @@
 import Villagers from './Villagers'
 
-function VillagerCards({villagers}) {
+function VillagerCards({filterVillagers}) {
 
-    const villagerArray = villagers.map((villager) => {
+    const villagerArray = filterVillagers.map((filterVillager) => {
         return(
             <Villagers
-                key = {villager.id}
-                {...villager}
+                key = {filterVillager.id}
+
+                {...filterVillager}
             />
         )
     })
+
+    // console.log(villagerArray)
 
     return(
         <div>

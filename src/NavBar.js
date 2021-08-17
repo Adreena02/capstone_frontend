@@ -3,13 +3,7 @@ import Search from './Search'
 import Header from './Header'
 import {useState} from 'react'
 
-function NavBar() {
-
-    const [search, setSearch] = useState("")
-
-    function handleSearch(e){
-        setSearch(e.target.value)
-    }
+function NavBar({handleSearch}) {
 
     return(
         <div className="NavBar">
