@@ -14,6 +14,7 @@ function Homepage() {
         .then(data => setVillagers(data))
     }, [])
 
+    
 
     function handleSearch(e){
         setSearch(e.target.value)

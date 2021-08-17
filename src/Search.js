@@ -1,4 +1,3 @@
-
 function Search({handleSearch}) {
     return(
         <div>
