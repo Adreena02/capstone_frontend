@@ -6,12 +6,11 @@ function VillagerContainer() {
     const [villagers, setVillagers] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3001/villagers')
+        fetch('http://localhost:3000/villagers')
         .then(res => res.json())
         .then(data => setVillagers(data))
     }, [])
-
-    // console.log(villagers)
+    console.log(setVillagers)
     return(
         <div>
             <UserVillagers />

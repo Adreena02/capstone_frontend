@@ -12,7 +12,7 @@ function NavBar() {
     }
 
     return(
-        <div>
+        <div className="NavBar">
             <Auth />
             <Search handleSearch={handleSearch} />
             <Header />

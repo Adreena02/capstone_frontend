@@ -1,9 +1,9 @@
-import 
+import {Card} from '@material-ui/core'
 
 function Villagers() {
     return(
         <div>
-            {/* <Card /> */}
+           
         </div>
     )
 }

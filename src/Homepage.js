@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router-dom'
+// import { Route, Switch } from 'react-router-dom'
 import NavBar from './NavBar'
 import VillagerContainer from './VillagerContainer'
 import Profile from './Profile'
@@ -8,10 +8,7 @@ function Homepage() {
         <div>
         <NavBar />
         <VillagerContainer />
-        <Switch>
-          <Route path='/Profile' component={()=>  <Profile />}/>
-        </Switch>
-
+        <Profile />
         </div>
         
 
