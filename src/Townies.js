@@ -1,7 +1,7 @@
-function Townies() {
+function Townies({}) {
     return(
         <div>
-
+            
         </div>
     )
 }

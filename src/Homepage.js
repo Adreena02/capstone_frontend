@@ -24,7 +24,12 @@ function Homepage() {
         .then(data => setPlayers(data))
     }, [])
     
-    
+    // useEffect(() => {
+    //     let id = setPlayers.id
+    //     fetch(`http://localhost:3000/players/${id}`)
+    //     .then(res => res.json())
+    //     .then(data => console.log)
+    // })
 
     function handleSearch(e){
         setSearch(e.target.value)
@@ -43,33 +48,54 @@ function Homepage() {
 
     function currentUser(e){
         let selectedUser = players.find(player => player.user_name === e.target.value)
-        setUserNow(selectedUser)
+        setUserNow(selectedUser.user_name)
+        console.log(selectedUser.id)
+        // console.log(selectedUser.user_name)
     }
 
-    function handleAddToTown(e){
+   
 
-        let id = userNow.id
-        let neighborObj = {
-            villager_id: villagers.id,
-            player_id: players.id
-        }
+        // let id = players.id
+        // fetch(`http://localhost:3000/players/${id}/townies`)
+        // .then(res => res.json())
+        // .then(data => console.log(data))
     
-        fetch(`http://localhost:3000/players/${id}/townies`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(neighborObj)
-            })
-        .then(res => res.json())
-        .then(data => setNeighbors(data))
-    }
+    // function removeFromTown(e){
+    //     if(setUserNow.id){
+    //         let neighborId = 
+    //     }
+
+    //     fetch(`http://localhost:3000/players/${id}`, {
+    //         method: "DELETE"
+    //     })
+    // }
+
+
+    // function handleAddToTown(e){
+
+    //     let id = players.id
+    //     console.log(id)
+    //     let neighborObj = {
+    //         villager_id: villagers.id,
+    //         player_id: players.id
+    //     }
+    
+    //     fetch(`http://localhost:3000/players/${id}/townies`, {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(neighborObj)
+    //         })
+    //     .then(res => res.json())
+    //     .then(data => setNeighbors(data))
+    // }
 
     // console.log(villagers)
     return(
         <div>
         <NavBar handleSearch={handleSearch} setPlayers={setPlayers} users={users} currentUser={currentUser} userNow={userNow}/>
-        <VillagerContainer handleAddToTown={handleAddToTown} filterVillagers={filterVillagers}/>
+        <VillagerContainer  filterVillagers={filterVillagers} currentUser={currentUser} players={players} villagers={villagers}/>
         <Profile />
         </div>
         
