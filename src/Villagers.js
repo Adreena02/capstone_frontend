@@ -5,7 +5,7 @@ function Villagers(props) {
     const [toggleMove, setToggleMove] = useState(false)
     const [toggleDream, setToggleDream] = useState(false)
 
-    const {name, species, birthday, img_url, gender, id} = props
+    const {name, species, birthday, img_url, gender, id, handleAddToTown} = props
 
     return(
         <Card className="card">
@@ -20,7 +20,7 @@ function Villagers(props) {
                         
                         
                     ): (
-                        <button>Move In 🏠</button>
+                        <button onClick={handleAddToTown}>Move In 🏠</button>
                     ) 
                     }
                 {toggleDream ? (
