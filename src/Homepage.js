@@ -10,7 +10,7 @@ function Homepage() {
     const [neighbors, setNeighbors] = useState([])
     const [players, setPlayers] = useState([])
     const [userNow, setUserNow] = useState("")
-
+    const [id, setId] = useState("")
 
     useEffect(() => {
         fetch('http://localhost:3000/villagers')
@@ -49,7 +49,7 @@ function Homepage() {
     function currentUser(e){
         let selectedUser = players.find(player => player.user_name === e.target.value)
         setUserNow(selectedUser.user_name)
-        console.log(selectedUser.id)
+        setId(selectedUser.id)
         // console.log(selectedUser.user_name)
     }
 
@@ -65,7 +65,7 @@ function Homepage() {
     //         let neighborId = 
     //     }
 
-    //     fetch(`http://localhost:3000/players/${id}`, {
+    //     fetch(`http://localhost:3000/players/${id}/townies`, {
     //         method: "DELETE"
     //     })
     // }
@@ -95,7 +95,7 @@ function Homepage() {
     return(
         <div>
         <NavBar handleSearch={handleSearch} setPlayers={setPlayers} users={users} currentUser={currentUser} userNow={userNow}/>
-        <VillagerContainer  filterVillagers={filterVillagers} currentUser={currentUser} players={players} villagers={villagers}/>
+        <VillagerContainer  filterVillagers={filterVillagers} currentUser={currentUser} players={players} villagers={villagers} id={id} />
         <Profile />
         </div>
         
