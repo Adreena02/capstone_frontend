@@ -1,14 +1,17 @@
 import Auth from './Auth'
 import Search from './Search'
+import {NavLink} from 'react-router-dom'
 // import Header from './Header'
 import {useState} from 'react'
 
-function NavBar({handleSearch, setPlayers, users, currentUser, userNow, handleStretchSearch}) {
+function NavBar({handleSearch, setPlayers, users, currentUser, userNow, handleStretchSearch, showPlayerNeighbors}) {
 
     return(
         <div className="NavBar">
-            <button>My Villagers</button>
-            <Auth setPlayers={setPlayers} users={users} currentUser={currentUser} userNow={userNow}/>
+            <NavLink to='/home'>Home</NavLink>
+            <NavLink to='/profile'>Profile</NavLink>
+            <NavLink to='/auth'>Sign Up</NavLink>
+            
             <Search handleSearch={handleSearch} handleStretchSearch={handleStretchSearch} />
            
         </div>

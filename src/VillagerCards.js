@@ -1,16 +1,20 @@
 import Villagers from './Villagers'
 
-function VillagerCards({stretchFilter, filterVillagers, handleAddToTown}) {
+function VillagerCards({stretchFilter, addUserVillager, filterVillagers, villagerId, playerId, moveOut, removeNeighbor}) {
 
     const villagerArray = filterVillagers.map((filterVillager) => {
         return(
             <Villagers
                 key = {filterVillager.id}
-                handleAddToTown={handleAddToTown}
+                moveOut = {moveOut}
+                playerId={playerId}
+                addUserVillager={addUserVillager}
+                removeNeighbor={removeNeighbor}
                 {...filterVillager}
             />
         )
     })
+
 
     // const stretchVillagerArray = stretchFilter.map((stretch) => {
     //     return (

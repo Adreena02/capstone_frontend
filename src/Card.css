@@ -1,0 +1,33 @@
+.card {
+    margin: 1rem;
+    box-shadow: 1px 0px 8.5px 0 #ddd;
+    border-radius: 8px;
+    justify-content: center;
+    display: inline-flex;
+}
+
+.card img{
+    max-width: 300px;
+    max-height: 425px;
+    width: auto;
+    height: auto;
+}
+
+.card .text {
+    width: 300px;
+    height: 425px;
+    height: auto;
+    text-align: center;
+}
+
+
+.villager-name {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+   
+}
+
+.card-info {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 10px;
+}
