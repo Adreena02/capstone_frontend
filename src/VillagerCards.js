@@ -1,6 +1,6 @@
 import Villagers from './Villagers'
 
-function VillagerCards({stretchFilter, addUserVillager, filterVillagers, villagerId, playerId, moveOut, removeNeighbor}) {
+function VillagerCards({stretchFilter, addUserVillager, filterVillagers, villagerId, playerId, moveOut, removeNeighbor,addDreamVillager}) {
 
     const villagerArray = filterVillagers.map((filterVillager) => {
         return(
@@ -8,6 +8,7 @@ function VillagerCards({stretchFilter, addUserVillager, filterVillagers, village
                 key = {filterVillager.id}
                 moveOut = {moveOut}
                 playerId={playerId}
+                addDreamVillager={addDreamVillager}
                 addUserVillager={addUserVillager}
                 removeNeighbor={removeNeighbor}
                 {...filterVillager}

@@ -15,6 +15,7 @@ function Homepage() {
     const [playerId, setPlayerId] = useState("")
     const [stretchSearch, setStretchSearch] = useState("")
     const [showUserVillagers, setUserVillagers] = useState([])
+    const [dreamVillagers, setDreamVillagers] = useState([])
 
     useEffect(() => {
         fetch('http://localhost:3000/villagers')
@@ -40,9 +41,27 @@ function Homepage() {
         })
     }, [playerId])
 
+    useEffect(() => {
+        fetch(`http://localhost:3000/players/${playerId}/dreamies`)
+        .then(res => res.json())
+        // .then(console.log)
+        .then(data => {
+            if (data === null){
+                setDreamVillagers([])
+            } else {
+                setDreamVillagers(data)
+            }
+        })
+    }, [playerId])
+
+    // console.log(dreamVillagers)
+
     function addUserVillager(villager){
         setUserVillagers([...showUserVillagers, villager])
+    }
 
+    function addDreamVillager(villager){
+        setDreamVillagers([...dreamVillagers, villager])
     }
 
 
@@ -91,10 +110,10 @@ function Homepage() {
         <Login setPlayers={setPlayers} users={users} currentUser={currentUser} userNow={userNow}/>
         <Switch>
             <Route exact path='/profile'>
-                <Profile showUserVillagers={showUserVillagers}  />
+                <Profile showUserVillagers={showUserVillagers} dreamVillagers={dreamVillagers} />
             </Route>
             <Route exact path='/home' >
-                <VillagerContainer filterVillagers={filterVillagers} currentUser={currentUser} players={players} villagers={villagers} playerId={playerId} addUserVillager={addUserVillager}/>
+                <VillagerContainer addDreamVillager={addDreamVillager} filterVillagers={filterVillagers} currentUser={currentUser} players={players} villagers={villagers} playerId={playerId} addUserVillager={addUserVillager}/>
             </Route>
             <Route exact path='/auth' >
                 <Auth setPlayers={setPlayers} users={users} currentUser={currentUser} userNow={userNow}/>
@@ -105,44 +124,3 @@ function Homepage() {
     }
     
     export default Homepage
-    
-    
-    
-    
-            // let id = players.id
-            // fetch(`http://localhost:3000/players/${id}/townies`)
-            // .then(res => res.json())
-            // .then(data => console.log(data))
-        
-        // function removeFromTown(e){
-        //     if(setUserNow.id){
-        //         let neighborId = 
-        //     }
-    
-        //     fetch(`http://localhost:3000/players/${id}/townies`, {
-        //         method: "DELETE"
-        //     })
-        // }
-    
-    
-        // function handleAddToTown(e){
-    
-        //     let id = players.id
-        //     console.log(id)
-        //     let neighborObj = {
-        //         villager_id: villagers.id,
-        //         player_id: players.id
-        //     }
-        
-        //     fetch(`http://localhost:3000/players/${id}/townies`, {
-        //         method: 'POST',
-        //         headers: {
-        //             'Content-Type': 'application/json'
-        //         },
-        //         body: JSON.stringify(neighborObj)
-        //         })
-        //     .then(res => res.json())
-        //     .then(data => setNeighbors(data))
-        // }
-    
-        // console.log(villagers)

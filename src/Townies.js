@@ -1,7 +1,7 @@
 function Townies(props) {
 
     const {name, species, birthday, gender, img_url, personality_traits} = props
-    console.log(props);
+    // console.log(props);
 
     return(
         <div>

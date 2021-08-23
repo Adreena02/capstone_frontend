@@ -1,9 +1,18 @@
 import DreamVillagerCards from './DreamVillagerCards'
 
-function DreamVillagerContainer() {
+function DreamVillagerContainer({dreamVillagers}) {
+
+    const dreamArray = dreamVillagers.map((dreamie) => {
+        return(
+            <DreamVillagerCards 
+                key={dreamie.id}
+                {...dreamie}
+            />
+        )
+    })
     return(
         <div>
-            <DreamVillagerCards />
+          {dreamArray}
         </div>
     )
 }

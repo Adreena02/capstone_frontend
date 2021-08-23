@@ -5,7 +5,7 @@ function Villagers(props) {
     const [toggleMove, setToggleMove] = useState(false)
     const [toggleDream, setToggleDream] = useState(false)
 
-    const {name, addUserVillager, playerId, species, birthday, img_url, gender, id, moveOut, removeNeighbor} = props
+    const {name, addUserVillager, playerId, species, birthday, img_url, gender, id, moveOut, removeNeighbor, addDreamVillager} = props
 
     function handleAddToTown(e){
 
@@ -29,6 +29,24 @@ function Villagers(props) {
         })
     }
 
+    function handleAddToDreamList(e){
+        let dreamObj = {
+            villager_id: id,
+            player_id: playerId
+        }
+
+        fetch(`http://localhost:3000/dream_villagers`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dreamObj)
+        })
+        .then(res => res.json())
+        .then(newDream => {
+            addDreamVillager(newDream)
+        })
+    }
   
     
 
@@ -52,11 +70,11 @@ function Villagers(props) {
                         <button onClick={handleAddToTown}>Move In 🏠</button>
                     ) 
                     }
-                {/* {toggleDream ? (
+                {toggleDream ? (
                     <button>Remove From Your Dreamies ⛈️</button>
                 ): (
-                    <button>Add to Your Dreamies 🌤️</button>
-                )} */}
+                    <button onClick={handleAddToDreamList}>Add to Dreamies 🌤️</button>
+                )}
            </div>
            <div>
                 
