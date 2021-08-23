@@ -1,4 +1,4 @@
-function Search({handleSearch}) {
+function Search({handleSearch, handleStretchSearch}) {
     return(
         <div>
             <input className="search" onChange={handleSearch} placeholder="Search for a villager"/>

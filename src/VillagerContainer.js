@@ -2,26 +2,16 @@ import UserVillagers from './UserVillagers'
 import VillagerCards from './VillagerCards'
 import {useEffect, useState} from 'react'
 
-function VillagerContainer({filterVillagers, players, villagers, id}) {
+function VillagerContainer({filterVillagers, players, villagers, playerId, stretchFilter}) {
     const [neighbors, setNeighbors] = useState([])
 
-   console.log(players)
-
     function handleAddToTown(e){
-
-        // let newUser = players.find(player => player.id === e.target.value)
-        // console.log(newUser)
-
-        // console.log
-
-
-        // console.log(id)
         let neighborObj = {
             villager_id: villagers.id,
             player_id: players.id
         }
     
-        fetch(`http://localhost:3000/players/${id}/townies`, {
+        fetch(`http://localhost:3000/players/${playerId}/townies`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -34,11 +24,17 @@ function VillagerContainer({filterVillagers, players, villagers, id}) {
             setNeighbors(data)
         })
     }
+
+    
+
+    function moveOut(e){
+
+    }
  
     return(
         <div>
-            <UserVillagers filterVillagers={filterVillagers} />
-            <VillagerCards handleAddToTown={handleAddToTown} filterVillagers={filterVillagers}/>
+            <UserVillagers stretchFilter={stretchFilter} filterVillagers={filterVillagers} neighbors={neighbors}/>
+            <VillagerCards handleAddToTown={handleAddToTown} stretchFilter={stretchFilter} filterVillagers={filterVillagers}/>
         </div>
         
 

@@ -10,7 +10,8 @@ function Homepage() {
     const [neighbors, setNeighbors] = useState([])
     const [players, setPlayers] = useState([])
     const [userNow, setUserNow] = useState("")
-    const [id, setId] = useState("")
+    const [playerId, setPlayerId] = useState("")
+    const [stretchSearch, setStretchSearch] = useState("")
 
     useEffect(() => {
         fetch('http://localhost:3000/villagers')
@@ -32,15 +33,32 @@ function Homepage() {
     // })
 
     function handleSearch(e){
-        setSearch(e.target.value)
+        return (
+            setSearch(e.target.value) ||
+            setStretchSearch(e.target.value)
+        )
+        
+
     }
+
 
     const filterVillagers = villagers.filter(villager => {
         return (villager.name.toLowerCase().includes(search.toLowerCase()))
         ||
         (villager.species.toLowerCase().includes(search.toLowerCase()))
+        ||
+        (villager.birthday.toLowerCase().includes(search.toLowerCase()))
+        ||
+        (villager.gender.toLowerCase().includes(search.toLowerCase()))
     })
     // console.log(players)
+
+    // const stretchFilter = villagers.filter(villager => {
+    //     return (villager.gender.toLowerCase().includes(stretchSearch.toLowerCase()))
+    //     (villager.birthday.toLowerCase().includes(stretchSearch.toLowerCase()))
+        
+    // })
+
 
     let users = players.map(player => <option key = {player.id} value={player.user_name}> {player.user_name} </option>)
 
@@ -49,7 +67,7 @@ function Homepage() {
     function currentUser(e){
         let selectedUser = players.find(player => player.user_name === e.target.value)
         setUserNow(selectedUser.user_name)
-        setId(selectedUser.id)
+        setPlayerId(selectedUser.id)
         // console.log(selectedUser.user_name)
     }
 
@@ -95,7 +113,7 @@ function Homepage() {
     return(
         <div>
         <NavBar handleSearch={handleSearch} setPlayers={setPlayers} users={users} currentUser={currentUser} userNow={userNow}/>
-        <VillagerContainer  filterVillagers={filterVillagers} currentUser={currentUser} players={players} villagers={villagers} id={id} />
+        <VillagerContainer  filterVillagers={filterVillagers} currentUser={currentUser} players={players} villagers={villagers} playerId={playerId} />
         <Profile />
         </div>
         

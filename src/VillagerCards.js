@@ -1,6 +1,6 @@
 import Villagers from './Villagers'
 
-function VillagerCards({filterVillagers, handleAddToTown}) {
+function VillagerCards({stretchFilter, filterVillagers, handleAddToTown}) {
 
     const villagerArray = filterVillagers.map((filterVillager) => {
         return(
@@ -12,11 +12,22 @@ function VillagerCards({filterVillagers, handleAddToTown}) {
         )
     })
 
+    // const stretchVillagerArray = stretchFilter.map((stretch) => {
+    //     return (
+    //         <Villagers
+    //             key={stretchFilter.id}
+    //             handleAddToTown={handleAddToTown}
+    //             {...stretchFilter}
+    //             />
+    //     )
+    // })
+
     // console.log(villagerArray)
 
     return(
         <div>
             {villagerArray}
+            {}
         </div>
     )
 }
