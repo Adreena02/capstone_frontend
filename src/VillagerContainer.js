@@ -2,28 +2,28 @@
 import VillagerCards from './VillagerCards'
 import {useEffect, useState} from 'react'
 
-function VillagerContainer({filterVillagers, addUserVillager,players, villagers, playerId, stretchFilter, showUserVillagers, setVillagers, addDreamVillager}) {
+function VillagerContainer({filterVillagers, addUserVillager,players, villagers, playerId, showUserVillagers, setVillagers, addDreamVillager}) {
     const [neighbors, setNeighbors] = useState([])
 
 
-    function moveOut(villagerId){
-        const updatedNeighbors = neighbors.filter((neighbor) => {
-            return neighbor.id !== villagerId
-        })
+//     function moveOut(villagerId){
+//         const updatedNeighbors = neighbors.filter((neighbor) => {
+//             return neighbor.id !== villagerId
+//         })
 
-        setNeighbors(updatedNeighbors)
-    }
+//         setNeighbors(updatedNeighbors)
+//     }
 
-    function removeNeighbor(e) {
-        if (playerId.id) {
-            let neighborId = neighbors.find(neighbor => neighbor.player_id === playerId.id).id
+//     function removeNeighbor(e) {
+//         if (playerId.id) {
+//             let neighborId = neighbors.find(neighbor => neighbor.player_id === playerId.id).id
     
-            fetch(`http://localhost:3000/user_villagers/${neighborId}`, {
-                method: 'DELETE'
-            })
-        }
-        moveOut(filterVillagers.id)
-}  
+//             fetch(`http://localhost:3000/user_villagers/${neighborId}`, {
+//                 method: 'DELETE'
+//             })
+//         }
+//         moveOut(filterVillagers.id)
+// }  
 
     function showPlayerNeighbors(newNeighbor){
         let newVillagerArray = [newNeighbor, ...villagers]
@@ -35,7 +35,7 @@ function VillagerContainer({filterVillagers, addUserVillager,players, villagers,
     return(
         <div>
             {/* <UserVillagers showUserVillagers={showUserVillagers} showPlayerNeighbors={showPlayerNeighbors} stretchFilter={stretchFilter} filterVillagers={filterVillagers} neighbors={neighbors} removeNeighbor={removeNeighbor}/> */}
-            <VillagerCards addDreamVillager={addDreamVillager} addUserVillager={addUserVillager} removeNeighbor={removeNeighbor} moveOut={moveOut} stretchFilter={stretchFilter} filterVillagers={filterVillagers} playerId={playerId}/>
+            <VillagerCards addDreamVillager={addDreamVillager} addUserVillager={addUserVillager} filterVillagers={filterVillagers} playerId={playerId}/>
         </div>
         
 

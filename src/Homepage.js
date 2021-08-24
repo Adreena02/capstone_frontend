@@ -4,6 +4,7 @@ import VillagerContainer from './VillagerContainer'
 import Auth from './Auth'
 import Login from './Login'
 import Profile from './Profile'
+import VillagerForm from './VillagerForm'
 import { useState, useEffect } from 'react'
 
 function Homepage() {
@@ -54,7 +55,7 @@ function Homepage() {
         })
     }, [playerId])
 
-    // console.log(dreamVillagers)
+    
 
     function addUserVillager(villager){
         setUserVillagers([...showUserVillagers, villager])
@@ -63,7 +64,6 @@ function Homepage() {
     function addDreamVillager(villager){
         setDreamVillagers([...dreamVillagers, villager])
     }
-
 
     function handleSearch(e){
         return (
@@ -82,6 +82,8 @@ function Homepage() {
         (villager.gender.toLowerCase().includes(search.toLowerCase()))
     })
 
+    console.log(filterVillagers.id)
+
     let users = players.map(player => 
     <option key = {player.id} value={player.user_name}> {player.user_name} </option>)
 
@@ -92,16 +94,30 @@ function Homepage() {
     }
 
   
-    function addNewVillager(){
-        let villagerObj = {
-            name: villagers.name,
-            gender: villagers.gender,
-            species: villagers.species,
-            birthday: villagers.birthday,
+   
+
+
+    // console.log(filterVillagers)
+    // function moveOut(filterVillagers){
+    //     const updatedNeighbors = neighbors.filter((neighbor) => {
+    //         return neighbor.id !== filterVillagers
+    //     })
+
+    //     setNeighbors(updatedNeighbors)
+    // }
+    // console.log(players.id)
+    function removeNeighbor(e) {
+        if (playerId.id) {
+            let neighborId = neighbors.find(neighbor => neighbor.player_id === playerId.id).id
+    
+            fetch(`http://localhost:3000/user_villagers/${neighborId}`, {
+                method: 'DELETE'
+            })
+            .then(console.log)
         }
+        // moveOut(filterVillagers.id)
+}  
 
-
-    }
    
    
     return(
@@ -110,10 +126,13 @@ function Homepage() {
         <Login setPlayers={setPlayers} users={users} currentUser={currentUser} userNow={userNow}/>
         <Switch>
             <Route exact path='/profile'>
-                <Profile showUserVillagers={showUserVillagers} dreamVillagers={dreamVillagers} />
+            <Profile showUserVillagers={showUserVillagers} dreamVillagers={dreamVillagers} removeNeighbor={removeNeighbor}/>
             </Route>
             <Route exact path='/home' >
                 <VillagerContainer addDreamVillager={addDreamVillager} filterVillagers={filterVillagers} currentUser={currentUser} players={players} villagers={villagers} playerId={playerId} addUserVillager={addUserVillager}/>
+            </Route>
+            <Route exact path='/add-new-villager'>
+                <VillagerForm villagers={villagers}/>
             </Route>
             <Route exact path='/auth' >
                 <Auth setPlayers={setPlayers} users={users} currentUser={currentUser} userNow={userNow}/>

@@ -5,7 +5,7 @@ function Villagers(props) {
     const [toggleMove, setToggleMove] = useState(false)
     const [toggleDream, setToggleDream] = useState(false)
 
-    const {name, addUserVillager, playerId, species, birthday, img_url, gender, id, moveOut, removeNeighbor, addDreamVillager} = props
+    const {name, addUserVillager, playerId, species, birthday, img_url, gender, id, addDreamVillager} = props
 
     function handleAddToTown(e){
 
@@ -61,20 +61,12 @@ function Villagers(props) {
                     <br/> {species} 
                     <br/> {gender}</p>
                 </div>
+                <div className="villager-btns">
+                <button onClick={handleAddToTown}>Move In 🏠</button>
+                <button onClick={handleAddToDreamList}>Add to Dreamies 🌤️</button>
+                </div>
                 
-                {toggleMove ? (
-                        <button onClick={removeNeighbor}>Move Out 🏠</button> 
-                        
-                        
-                    ): (
-                        <button onClick={handleAddToTown}>Move In 🏠</button>
-                    ) 
-                    }
-                {toggleDream ? (
-                    <button>Remove From Your Dreamies ⛈️</button>
-                ): (
-                    <button onClick={handleAddToDreamList}>Add to Dreamies 🌤️</button>
-                )}
+                
            </div>
            <div>
                 
