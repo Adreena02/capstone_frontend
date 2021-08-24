@@ -2,12 +2,13 @@
 import Townies from "./Townies"
 import { useState, useEffect } from 'react'
 
-function UserVillagers({showPlayerNeighbors, filterVillagers, neighbors, removeNeighbor, props, showUserVillagers}) {
+function UserVillagers({showPlayerNeighbors, filterVillagers, neighbors, removeNeighbor, props, showUserVillagers, handleDeleteClick}) {
 
     const userVillagerArray = showUserVillagers.map((userVillager) => {
         return(
             <Townies
                 key = {userVillager.id}
+                handleDeleteClick={handleDeleteClick}
                 removeNeighbor={removeNeighbor}
                 {...userVillager}
             />

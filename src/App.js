@@ -5,7 +5,7 @@ import Homepage from './Homepage';
 
 function App() {
   return (
-      <div>
+      <div className="app" style={{backgroundImage: "url(/background.png)"}}>
         <Homepage />
       </div>
     )

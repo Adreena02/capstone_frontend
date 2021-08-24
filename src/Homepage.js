@@ -6,6 +6,7 @@ import Login from './Login'
 import Profile from './Profile'
 import VillagerForm from './VillagerForm'
 import { useState, useEffect } from 'react'
+import './Homepage.css'
 
 function Homepage() {
     const [villagers, setVillagers] = useState([])
@@ -21,7 +22,7 @@ function Homepage() {
     useEffect(() => {
         fetch('http://localhost:3000/villagers')
         .then(res => res.json())
-        .then(data => setVillagers(data))
+        .then(data => setVillagers(data.reverse()))
     }, [])
 
     useEffect(() => {
@@ -58,11 +59,15 @@ function Homepage() {
     
 
     function addUserVillager(villager){
-        setUserVillagers([...showUserVillagers, villager])
+        setUserVillagers([villager, ...showUserVillagers])
     }
 
     function addDreamVillager(villager){
-        setDreamVillagers([...dreamVillagers, villager])
+        setDreamVillagers([villager, ...dreamVillagers])
+    }
+
+    function addVillager(villager){
+        setVillagers([villager, ...villagers])
     }
 
     function handleSearch(e){
@@ -91,19 +96,6 @@ function Homepage() {
         setPlayerId(selectedUser.id)
     }
 
-  
-   
-
-
-    // console.log(filterVillagers)
-    // function moveOut(filterVillagers){
-    //     const updatedNeighbors = neighbors.filter((neighbor) => {
-    //         return neighbor.id !== filterVillagers
-    //     })
-
-    //     setNeighbors(updatedNeighbors)
-    // }
-    // console.log(players.id)
     function removeNeighbor(e) {
         if (playerId.id) {
             let neighborId = neighbors.find(neighbor => neighbor.player_id === playerId.id).id
@@ -113,26 +105,35 @@ function Homepage() {
             })
             .then(console.log)
         }
-        // moveOut(filterVillagers.id)
-}  
+    }  
 
+    function handleDeleteClick(e, id){
+        e.preventDefault()
+        // let id = villagers.id
+        // id => undefined
+        fetch(`http://localhost:3000/user_villagers/${id}`, {
+            method: "DELETE"
+        })
+        .then(() => {
+            const updatedUserVillagers = showUserVillagers.filter((uv) => uv.id !== id)
+            setUserVillagers(updatedUserVillagers)
+        })
+        // .then(console.log)
+    }
 
-
-   
-   
     return(
         <div className="homepage">
         <NavBar handleSearch={handleSearch} setPlayers={setPlayers} users={users} currentUser={currentUser} userNow={userNow}/>
         <Login setPlayers={setPlayers} users={users} currentUser={currentUser} userNow={userNow}/>
         <Switch>
-            <Route exact path='/profile'>
-            <Profile showUserVillagers={showUserVillagers} dreamVillagers={dreamVillagers} removeNeighbor={removeNeighbor}/>
+            <Route exact path='/profile' className="profile">
+            <Profile showUserVillagers={showUserVillagers} dreamVillagers={dreamVillagers} removeNeighbor={removeNeighbor} handleDeleteClick={handleDeleteClick}/>
             </Route>
             <Route exact path='/home' >
                 <VillagerContainer addDreamVillager={addDreamVillager} filterVillagers={filterVillagers} currentUser={currentUser} players={players} villagers={villagers} playerId={playerId} addUserVillager={addUserVillager}/>
             </Route>
             <Route exact path='/add-new-villager'>
-                <VillagerForm villagers={villagers}/>
+                <VillagerForm villagers={villagers} addVillager={addVillager}/>
             </Route>
             <Route exact path='/auth' >
                 <Auth setPlayers={setPlayers} users={users} currentUser={currentUser} userNow={userNow}/>

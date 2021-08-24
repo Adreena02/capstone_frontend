@@ -1,20 +1,21 @@
 import { Card } from '@material-ui/core'
+import './Villager.css' 
 function Townies(props) {
 
-    const {name, species, birthday, gender, img_url, personality_traits, removeNeighbor} = props
-    // console.log(props);
+    const {id, name, species, birthday, gender, img_url, personality_traits, removeNeighbor, handleDeleteClick} = props
+    
 
     return(
-        <Card>
+        <Card className="cards" style={{backgroundColor: "#C8E4F4"}}>
             <div>
-                <img src={img_url} alt='oops' className="townie-photo" />
-                <h2 className="townie-name">{name}</h2>
+                <img src={img_url} alt='oops' className="photo" />
+                <h2 className="villager-name">{name}</h2>
                 <div className="card-info">
-                    <p>{birthday} <br/>
-                    {species} <br/>
-                    {gender}</p>
+                    <p>Birthday: {birthday} <br/>
+                    Species: {species} <br/>
+                    Gender: {gender}</p>
                 </div>
-                <button onClick={removeNeighbor}>Move Out!🏠</button>
+                <button className="move-out-btn" onClick={(e) => handleDeleteClick(e, id)}>Move Out!</button>
             </div>
         </Card>
         

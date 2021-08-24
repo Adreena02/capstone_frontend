@@ -1,6 +1,6 @@
 import {Card} from '@material-ui/core'
 import { useState } from 'react'
-
+import './Villager.css'
 function Villagers(props) {
     // const [toggleMove, setToggleMove] = useState(false)
     // const [toggleDream, setToggleDream] = useState(false)
@@ -49,7 +49,7 @@ function Villagers(props) {
     
 
     return(
-        <Card className="cards">
+        <Card style={{backgroundColor: "#C8E4F4"}} className="cards">
             <div>
                 
                 <img src={img_url} alt=''className="photo"/>
@@ -59,9 +59,9 @@ function Villagers(props) {
                     <br/> {species} 
                     <br/> {gender}</p>
                 </div>
-                <div className="villager-btns">
-                <button onClick={handleAddToTown}>Move In 🏠</button>
-                <button onClick={handleAddToDreamList}>Add to Dreamies 🌤️</button>
+                <div>
+                <button className="move-in-btn" onClick={handleAddToTown}>Move In</button>
+                <button className="add-to-dream-btn" onClick={handleAddToDreamList}>Add to Dreamies </button>
                 </div>
                    
            </div>

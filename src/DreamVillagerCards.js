@@ -1,18 +1,19 @@
 import {Card} from '@material-ui/core'
+import './Villager.css'
 function DreamVillagerCards(props) {
     const {name, species, birthday, gender, img_url, personality_traits } = props
     // console.log(props)
     return(
-        <Card className="dream-cards">
+        <Card className="cards" style={{backgroundColor: "#c8e4f4"}}>
         <div>
-            <img src={img_url} alt='oops' className="dream-photo" />
+            <img src={img_url} alt='oops' className="photo" />
             <h2 className="villager-name">{name}</h2>
             <div className="card-info">
                 <p>{birthday} <br/>
                 {species} <br/>
                 {gender} </p>
             </div>
-            <button>Remove from Dreamies</button>
+            <button className="remove-dream-btn">Remove from Dreamies</button>
         </div>
         </Card>
     )

@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import { useHistory } from 'react-router'
 
-function VillagerForm({villagers}){
+function VillagerForm({villagers, addVillager}){
+    const history = useHistory()
     const [formData, setFormData] = useState({
         name: villagers.name,
         birthday: villagers.birthday,
@@ -16,6 +18,8 @@ function VillagerForm({villagers}){
         })
     }
 
+    console.log(formData)
+
     function handleSubmit(e){
         e.preventDefault();
         fetch("http://localhost:3000/villagers", {
@@ -30,6 +34,11 @@ function VillagerForm({villagers}){
                 species: formData.species,
                 img_url: formData.img_url
             })
+        })
+        .then(res => res.json())
+        .then(vil => {
+            addVillager(vil)
+            history.push('/home')
         })
     }
     
@@ -59,7 +68,7 @@ function VillagerForm({villagers}){
                 <br />
                 <label>
                     Image Link:
-                    <input type="url" name="image" placeholder="Insert Image URL" value={formData.img_url} onChange={handleChange} required/>
+                    <input type="url" name="img_url" placeholder="Insert Image URL" value={formData.img_url} onChange={handleChange} required/>
                 </label>
                 <br />
                 <button type="submit">Add a Villager!</button>
