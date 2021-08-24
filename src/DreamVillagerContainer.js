@@ -1,11 +1,12 @@
 import DreamVillagerCards from './DreamVillagerCards'
 
-function DreamVillagerContainer({dreamVillagers}) {
+function DreamVillagerContainer({dreamVillagers, removeDream}) {
 
     const dreamArray = dreamVillagers.map((dreamie) => {
         return(
             <DreamVillagerCards 
                 key={dreamie.id}
+                removeDream={removeDream}
                 {...dreamie}
             />
         )

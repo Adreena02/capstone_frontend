@@ -109,8 +109,6 @@ function Homepage() {
 
     function handleDeleteClick(e, id){
         e.preventDefault()
-        // let id = villagers.id
-        // id => undefined
         fetch(`http://localhost:3000/user_villagers/${id}`, {
             method: "DELETE"
         })
@@ -118,7 +116,29 @@ function Homepage() {
             const updatedUserVillagers = showUserVillagers.filter((uv) => uv.id !== id)
             setUserVillagers(updatedUserVillagers)
         })
-        // .then(console.log)
+       
+    }
+
+    function removeDream(e, id){
+        e.preventDefault()
+        fetch(`http://localhost:3000/dream_villagers/${id}`, {
+            method: "DELETE"
+        })
+        .then(() => {
+            const updatedDreamVillagers = dreamVillagers.filter((dv) => dv.id !== id)
+            setDreamVillagers(updatedDreamVillagers)
+        })
+
+    }
+
+    function deleteVillager(e, id){
+        fetch(`http://localhost:3000/villagers/${id}`, {
+            method: "DELETE"
+        })
+        .then(() => {
+            const updatedVillagers = villagers.filter((vil) => vil.id !== id)
+            setVillagers(updatedVillagers)
+        })
     }
 
     return(
@@ -127,10 +147,10 @@ function Homepage() {
         <Login setPlayers={setPlayers} users={users} currentUser={currentUser} userNow={userNow}/>
         <Switch>
             <Route exact path='/profile' className="profile">
-            <Profile showUserVillagers={showUserVillagers} dreamVillagers={dreamVillagers} removeNeighbor={removeNeighbor} handleDeleteClick={handleDeleteClick}/>
+            <Profile showUserVillagers={showUserVillagers} dreamVillagers={dreamVillagers} removeNeighbor={removeNeighbor} handleDeleteClick={handleDeleteClick} removeDream={removeDream}/>
             </Route>
             <Route exact path='/home' >
-                <VillagerContainer addDreamVillager={addDreamVillager} filterVillagers={filterVillagers} currentUser={currentUser} players={players} villagers={villagers} playerId={playerId} addUserVillager={addUserVillager}/>
+                <VillagerContainer addDreamVillager={addDreamVillager} filterVillagers={filterVillagers} currentUser={currentUser} players={players} villagers={villagers} playerId={playerId} addUserVillager={addUserVillager} deleteVillager={deleteVillager}/>
             </Route>
             <Route exact path='/add-new-villager'>
                 <VillagerForm villagers={villagers} addVillager={addVillager}/>

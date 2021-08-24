@@ -1,7 +1,7 @@
 import {Card} from '@material-ui/core'
 import './Villager.css'
 function DreamVillagerCards(props) {
-    const {name, species, birthday, gender, img_url, personality_traits } = props
+    const {id, name, species, birthday, gender, img_url, personality_traits, removeDream } = props
     // console.log(props)
     return(
         <Card className="cards" style={{backgroundColor: "#c8e4f4"}}>
@@ -13,7 +13,7 @@ function DreamVillagerCards(props) {
                 {species} <br/>
                 {gender} </p>
             </div>
-            <button className="remove-dream-btn">Remove from Dreamies</button>
+            <button className="remove-dream-btn" onClick={(e) => removeDream(e, id)}>Remove from Dreamies</button>
         </div>
         </Card>
     )
