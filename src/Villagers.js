@@ -2,8 +2,8 @@ import {Card} from '@material-ui/core'
 import { useState } from 'react'
 
 function Villagers(props) {
-    const [toggleMove, setToggleMove] = useState(false)
-    const [toggleDream, setToggleDream] = useState(false)
+    // const [toggleMove, setToggleMove] = useState(false)
+    // const [toggleDream, setToggleDream] = useState(false)
 
     const {name, addUserVillager, playerId, species, birthday, img_url, gender, id, addDreamVillager} = props
 
@@ -23,8 +23,6 @@ function Villagers(props) {
             })
         .then(res => res.json())
         .then(newNeighbor => { 
-            // console.log(data)
-            // setNeighbors(newNeighbor)
             addUserVillager(newNeighbor)
         })
     }
@@ -65,8 +63,7 @@ function Villagers(props) {
                 <button onClick={handleAddToTown}>Move In 🏠</button>
                 <button onClick={handleAddToDreamList}>Add to Dreamies 🌤️</button>
                 </div>
-                
-                
+                   
            </div>
            <div>
                 

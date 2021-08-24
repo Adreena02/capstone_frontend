@@ -2,11 +2,11 @@ import { useState } from 'react'
 
 function VillagerForm({villagers}){
     const [formData, setFormData] = useState({
-        name: "",
-        birthday: "",
-        gender: "",
-        species: "",
-        img_url: "",
+        name: villagers.name,
+        birthday: villagers.birthday,
+        gender: villagers.gender,
+        species: villagers.species,
+        img_url: villagers.img_url
     })
 
     function handleChange(e){
@@ -39,27 +39,27 @@ function VillagerForm({villagers}){
             <form onSubmit={handleSubmit}>
                 <label>
                     Name:
-                    <input type="text" name="name" placeholder="Insert Villager's Name" value={formData.name} onChange={handleChange}/>
+                    <input type="text" name="name" placeholder="Insert Villager's Name" value={formData.name} onChange={handleChange} required/>
                 </label>
                 <br/>
                 <label>
                     Birthday:
-                    <input type="text" name="birthday" placeholder="Insert Villager's Birthday" value={formData.birthday} onChange={handleChange} />
+                    <input type="text" name="birthday" placeholder="Insert Villager's Birthday" value={formData.birthday} onChange={handleChange} required/>
                 </label>
                 <br/>
                 <label>
                     Gender:
-                    <input type="text" name="gender" placeholder="Insert Villager's Gender" value={formData.gender} onChange={handleChange}/>
+                    <input type="text" name="gender" placeholder="Insert Villager's Gender" value={formData.gender} onChange={handleChange} required/>
                 </label>
                 <br />
                 <label>
                     Species:
-                    <input type="text" name="species" placeholder="Insert Villager's Species" value={formData.species} onChange={handleChange} />
+                    <input type="text" name="species" placeholder="Insert Villager's Species" value={formData.species} onChange={handleChange} required/>
                 </label>
                 <br />
                 <label>
                     Image Link:
-                    <input type="text" name="image" placeholder="Insert Image URL" value={formData.img_url} onChange={handleChange}/>
+                    <input type="url" name="image" placeholder="Insert Image URL" value={formData.img_url} onChange={handleChange} required/>
                 </label>
                 <br />
                 <button type="submit">Add a Villager!</button>

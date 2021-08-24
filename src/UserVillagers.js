@@ -8,19 +8,14 @@ function UserVillagers({showPlayerNeighbors, filterVillagers, neighbors, removeN
         return(
             <Townies
                 key = {userVillager.id}
-                // moveOut = {moveOut}
-                removeNeighbor={removeNeighbor}   //NEED TO MOVE THIS FUNCTION UP A LEVEL
+                removeNeighbor={removeNeighbor}
                 {...userVillager}
             />
         )
     })
 
-    // console.log(userVillagerArray[1].id)
-    
-    
     return(
         <div>
-            {/* <Villagers /> */}
             {userVillagerArray}
         </div>
     )

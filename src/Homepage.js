@@ -82,8 +82,6 @@ function Homepage() {
         (villager.gender.toLowerCase().includes(search.toLowerCase()))
     })
 
-    console.log(filterVillagers.id)
-
     let users = players.map(player => 
     <option key = {player.id} value={player.user_name}> {player.user_name} </option>)
 
@@ -117,6 +115,8 @@ function Homepage() {
         }
         // moveOut(filterVillagers.id)
 }  
+
+
 
    
    
