@@ -4,7 +4,7 @@ function DreamVillagerCards(props) {
     const {id, name, species, birthday, gender, img_url, personality_traits, removeDream } = props
     // console.log(props)
     return(
-        <Card className="cards" style={{backgroundColor: "#c8e4f4"}}>
+        <Card className="cards" style={{backgroundColor: "#c8e4f4", boxShadow: '8px 4px 7px 1px lightGrey'}}>
         <div>
             <img src={img_url} alt='oops' className="photo" />
             <h2 className="villager-name">{name}</h2>

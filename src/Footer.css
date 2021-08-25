@@ -1,0 +1,22 @@
+.main-footer {
+    background-color: #F3F4C8;
+    padding-top: 3px;
+    width: relative;
+    background-size: cover;
+}
+
+.column {
+    font-size: 20px;
+    color: #66a882;
+}
+
+.para {
+    margin-top: -10px;
+    font-size: 11px;
+    font-style: italic;
+    color: #66a882;
+}
+
+.row {
+    color: #66a882;
+}

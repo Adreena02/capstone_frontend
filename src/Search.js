@@ -1,3 +1,4 @@
+import './Search.css'
 function Search({handleSearch, handleStretchSearch}) {
     return(
         <div className="search-area">

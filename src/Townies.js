@@ -6,7 +6,7 @@ function Townies(props) {
     
 
     return(
-        <Card className="cards" style={{backgroundColor: "#C8E4F4"}}>
+        <Card className="cards" style={{backgroundColor: "#C8E4F4", boxShadow: '8px 4px 7px 1px lightGrey'}}>
             <div>
                 <img src={img_url} alt='oops' className="photo" />
                 <h2 className="villager-name">{name}</h2>

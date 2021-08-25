@@ -155,9 +155,9 @@ function Homepage() {
             <Route exact path='/add-new-villager'>
                 <VillagerForm villagers={villagers} addVillager={addVillager}/>
             </Route>
-            <Route exact path='/auth' >
+            {/* <Route exact path='/auth' >
                 <Auth setPlayers={setPlayers} users={users} currentUser={currentUser} userNow={userNow}/>
-            </Route>
+            </Route> */}
         </Switch>
         </div>
         )

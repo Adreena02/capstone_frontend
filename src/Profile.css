@@ -1,5 +1,18 @@
+
 .profile-headers {
     text-align: center;
     font-size: 50px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #DBBF9E;
+    text-shadow:  2px 5px 1px 0px #aa8a66;
+    opacity: 0.8;
+}
+
+.profile-headers:hover, .profile-header:focus {
+    /* text-shadow: 1.5px 6px 2px 0 #DBBF9E; */
+    /* border: 1.5px #009688; */
+    background-color: #fff;
+    
+    opacity: 1px;
 }

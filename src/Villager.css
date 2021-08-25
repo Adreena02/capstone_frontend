@@ -1,12 +1,12 @@
 .cards {
-    color: #C8E4F4;
+    /* color: #C8E4F4; */
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
     width: 400px;
     height: 570px;
     border-radius: 20px;
-    box-shadow: 10px 2px 0 2px;
+    box-shadow: 20px 2px 0 2px;
     color: #fff;
     
 }
@@ -20,6 +20,7 @@
     padding-left: 10px;
     width: 230px;
     height: 340px;
+    margin-inline-start: 20%;
    
 }
 
@@ -39,42 +40,62 @@
 }
 
 .move-in-btn {
-    height: 20px;
+    height: 30px;
+    width: auto;
     font-weight: bolder;
     font-size: 14px;
-    text-anchor: middle;
-    width: auto;
-    margin-left: 90px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
-    padding-bottom: 10px;
-    margin-right: 10px;
+    margin-left: 15px;
+    margin-right: 5px;
     margin-bottom: -40px;
-    margin-bottom: -10px; 
+    margin-bottom: -10px;
     align-items: center;
     border-radius: 5px;
     background-color: #DBBF9E;
     opacity: 0.9;
     box-shadow: 2px 2px 6px 0px #9e7e59;
-    /* color: #fff; */
+    border: 3px solid #DBBF9E;
 }
 
 .add-to-dream-btn {
-    height: 20px;
+    height: 30px;
     font-weight: bolder;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 14px;
     width: auto; 
-    margin-right: 90px;
-    margin-bottom: -10px; 
+    /* margin-right: 90px;
+    margin-bottom: -10px;  */
     align-items: center;
     border-radius: 5px; 
     background-color: #DBBF9E;
     opacity: 0.9;
     box-shadow: 2px 2px 6px 0px #9e7e59;
+    border: 3px solid #DBBF9E;
+    margin-left: 14px;
+    margin-right: 10px;
     /* color: rgb(255, 255, 255); */
     /* background-color: #DBBF9E; */
  } 
 
+ .delete-villager-btn {
+     height: 30px;
+     width: auto;
+     font-weight: bolder;
+     font-size: 14px;
+     align-items: center;
+     background-color: #db6b57;
+     opacity: 0.9;
+     box-shadow: 2px 2px 6px 0px #487d9c;
+     border: 3px solid #ff826c49;
+     border-radius: 5px;
+     margin-left: 15px;
+     margin-right: 2px;
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     color: #2e100a;
+ 
+ }
+ 
 .move-out-btn {
     height: 30px;
     font-weight: bolder;
@@ -84,7 +105,10 @@
     margin-left: 156px;
     margin-bottom: -10px; 
     align-items: center;
-    border-radius: 5px; 
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px 0px #9e7e59;
+    border: 3px solid #DBBF9E;
+
 }
 
 .remove-dream-btn {

@@ -49,7 +49,7 @@ function Villagers(props) {
     
 
     return(
-        <Card style={{backgroundColor: "#C8E4F4"}} className="cards">
+        <Card style={{backgroundColor: "#C8E4F4", boxShadow: '8px 4px 7px 1px lightGrey'} } className="cards">
             <div>
                 
                 <img src={img_url} alt=''className="photo"/>
